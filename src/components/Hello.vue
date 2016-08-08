@@ -1,0 +1,38 @@
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <button v-on:click='clickme'>ClickMe</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      // note: changing this line won't causes changes
+      // with hot-reload because the reloaded component
+      // preserves its current state and we are modifying
+      // its initial state.
+      msg: 'hello from component a'
+    }
+  },
+  methods:{
+     clickme:function(){
+        console.log(123)
+     }
+  }
+
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h1 {
+  color: #42b983;
+}
+button{
+   width: 60px;
+   height: 30px;
+   border: none;
+}
+</style>
