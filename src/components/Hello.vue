@@ -16,9 +16,10 @@ export default {
       msg: 'hello from component a'
     }
   },
+  props:['msgfromfather'],
   methods:{
      clickme:function(){
-        console.log(123)
+        console.log(this.msgfromfather)
      }
   }
 
