@@ -8,7 +8,7 @@
       </ul>
   </div>
   <div>
-  	<component :is='vuenum' transition='fade'></component>
+  	<component :is='vuenum' transition='fade' transition-mode="out-in"></component>
   	<button @click='fade'>切换组件</button>
   </div>
 </template>
@@ -105,4 +105,5 @@ body {
   width: 100px;
   height: 100px
 }
+
 </style>
