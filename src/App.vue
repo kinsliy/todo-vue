@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <hello msgfromfather='you die'></hello>
+    <hello :msgfromfather="youdie"></hello>
      <h1 v-text='title'></h1>
      <input v-model='newItem' v-on:keyup.enter='addNew'>
       <ul>
@@ -29,9 +29,15 @@ export default {
                 isFinished:true
               }
           ],
-          newItem:''
+          newItem:'',
+          youdie:'hello'
          
        }
+    },
+    events:{
+    	 afather:function(f){
+            console.log(f)
+    	 }
     },
     methods:{
        toggleFinished:function(item){

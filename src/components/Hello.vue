@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <button v-on:click='clickme'>ClickMe</button>
+    <button  @click='father'>hello</button>
   </div>
 </template>
 
@@ -20,6 +21,9 @@ export default {
   methods:{
      clickme:function(){
         console.log(this.msgfromfather)
+     },
+     father:function(){
+        this.$dispatch('afather',this.msg)
      }
   }
 
