@@ -7,14 +7,21 @@
         <li v-for="item in items" v-on:click='toggleFinished(item)' v-bind:class="{finished:item.isFinished}"> {{item.label}}</li>
       </ul>
   </div>
+  <div>
+  	<component :is='vuenum' transition='fade'></component>
+  	<button @click='fade'>切换组件</button>
+  </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-
+import Hello from './components/Hello';
+import one from './components/one';
+import two from './components/two'
 export default {
     components:{
-       Hello
+       Hello,
+       one,
+       two,
     },
     data:function(){
        return {
@@ -30,7 +37,8 @@ export default {
               }
           ],
           newItem:'',
-          youdie:'hello'
+          youdie:'hello',
+          vuenum:'one'
          
        }
     },
@@ -53,6 +61,9 @@ export default {
        },
        handle:function(a){
        	 console.log(a);
+       },
+       fade:function(){
+       	 this.vuenum=(this.vuenum=='one')?'two':'one';
        }
 
 
