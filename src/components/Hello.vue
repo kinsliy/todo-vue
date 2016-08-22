@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <button v-on:click='clickme'>ClickMe</button>
-    <button  @click='father'>hello</button>
+    <button class='btn btn-danger' @click='father'>hello</button>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
         console.log(this.msgfromfather)
      },
      father:function(){
-        this.$dispatch('afather',this.msg)
+        this.$dispatch('child-msg','vue')
      }
   }
 
