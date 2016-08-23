@@ -9,7 +9,7 @@
   </div>
   <div>
   	<component :is='vuenum' transition='fade' transition-mode="out-in"></component>
-  	<button @click='fade'>切换组件</button>
+  	<button @click='fade'>切换组件1</button>
   </div>
 </template>
 
