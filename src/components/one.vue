@@ -1,4 +1,4 @@
 <template>
-	<h2>one component</h2>
+	<h2>one component hello</h2>git
 </template>
 
